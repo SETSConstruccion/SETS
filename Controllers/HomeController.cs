@@ -20,8 +20,14 @@ namespace SETS.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var home = new Home();
+            home.AnoFundacion = 2005;
+            home.Id = Guid.NewGuid().ToString();
+            home.Titulo = "Mantenimiento";
+            return View(home);
+
         }
+
 
         public IActionResult Privacy()
         {
@@ -29,19 +35,36 @@ namespace SETS.Controllers
         }
         public IActionResult Login()
         {
+                  
+
             return View();
         }
         public IActionResult Reportes()
         {
-            return View();
+            var reporte = new Home();
+            reporte.AnoFundacion = 2005;
+            reporte.Id = Guid.NewGuid().ToString();
+            reporte.Titulo = "Reporte";
+
+            return View(reporte);
         }
         public IActionResult Solicitudes()
         {
-            return View();
+            var solicitud = new Home();
+            solicitud.AnoFundacion = 2005;
+            solicitud.Id = Guid.NewGuid().ToString();
+            solicitud.Titulo = "Solicitudes";
+
+            return View(solicitud);
+           
         }
         public IActionResult Asignaciones()
         {
-            return View();
+            var asignacion = new Home();
+            asignacion.AnoFundacion = 2005;
+            asignacion.Id = Guid.NewGuid().ToString();
+            asignacion.Titulo = "asignacion";
+            return View(asignacion);
         }
 
 
