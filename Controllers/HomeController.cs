@@ -18,15 +18,50 @@ namespace SETS.Controllers
             _logger = logger;
         }
 
+
+
+
+        
+
+
         public IActionResult Index()
         {
-            var home = new Home();
-            home.AnoFundacion = 2005;
-            home.Id = Guid.NewGuid().ToString();
-            home.Titulo = "Mantenimiento";
-            return View(home);
 
+          /*  var usuario = new Home();
+
+            usuario.Id = Guid.NewGuid().ToString();
+            usuario.Edad = 50;
+            usuario.Nombre = "Fernando";
+            usuario.Password = "Fernando";
+            usuario.Correo = "fernando1999jw@gmail.com";*/
+
+
+            var catalago = new CatalogoReportes();
+
+
+            catalago.Nombre = "Mantenimiento 1";
+            catalago.Nombre2 = "Mantenimiento 2";
+            catalago.Nombre3 = "Mantenimiento 3";
+            catalago.Nombre4 = "Mantenimiento 4";
+            catalago.Nombre1 = "Mantenimiento 5";
+
+
+
+
+            return View(catalago);
         }
+
+
+        public IActionResult CatalogoReportes()
+        {
+
+            
+
+            return View();
+        }
+
+
+
 
 
         public IActionResult Privacy()
@@ -42,18 +77,18 @@ namespace SETS.Controllers
         public IActionResult Reportes()
         {
             var reporte = new Home();
-            reporte.AnoFundacion = 2005;
+          
             reporte.Id = Guid.NewGuid().ToString();
-            reporte.Titulo = "Reporte";
+          
 
             return View(reporte);
         }
         public IActionResult Solicitudes()
         {
             var solicitud = new Home();
-            solicitud.AnoFundacion = 2005;
+           
             solicitud.Id = Guid.NewGuid().ToString();
-            solicitud.Titulo = "Solicitudes";
+       
 
             return View(solicitud);
            
@@ -61,9 +96,9 @@ namespace SETS.Controllers
         public IActionResult Asignaciones()
         {
             var asignacion = new Home();
-            asignacion.AnoFundacion = 2005;
+           
             asignacion.Id = Guid.NewGuid().ToString();
-            asignacion.Titulo = "asignacion";
+          
             return View(asignacion);
         }
 
